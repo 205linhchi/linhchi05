@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngày Tết Ở Nghệ An - Tết Quê Em</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Menu -->
+    <header>
+        <nav>
+            <a href="index.html">Trang Chủ</a>
+            <a href="gioithieu.html">Giới Thiệu</a>
+            <a href="phongtuc.html">Phong Tục</a>
+            <a href="amthuc.html">Ẩm Thực</a>
+            <a href="vanhoa.html">Văn Hóa</a>
+            <a href="lienhe.html">Liên Hệ</a>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <section class="banner">
+        <div class="petals"></div>
+        <div class="banner-overlay">
+            <h1>🌸Tết cổ truyền ở Thành Vinh🌸</h1>
+        </div>
+    </section>
+
+    <section class=" intro">
+        <p>
+        Xuân về trên thành phố Vinh - trái tim của Nghệ An thân thương,
+        mang theo hơi thở dịu dàng của gió biển Cửa Lò và nét trầm mặc của dòng sông Lam hiền hòa. 
+        Tết nơi đây không chỉ là thời khắc chuyển giao năm mới, 
+        mà còn là dịp để mỗi người con xứ Nghệ trở về bên gia đình, 
+        quây quần bên mâm cơm ấm áp và gìn giữ những phong tục truyền thống thiêng liêng. 
+        Website này được tạo nên như một góc nhỏ lưu giữ hương vị Tết quê hương em. Hãy cùng tìm 
+        hiểu và tận hưởng ngày Tết trên mảnh đất xứ Nghệ này!
+        </p>
+    </section>
+
+    <section class="featured">
+        <h2>Mục nổi bật</h2>
+        <div class="featured-container">
+            <div class="card">
+                <img src="img/phongtuc1.jpg" alt="">
+                <span></span>
+                <h3>Phong tục – Nghi lễ</h3>
+                <a href="phongtuc.html">Xem chi tiết</a>
+            </div>
+
+            <div class="card">
+                <img src="img/cac-mon-ngon-ngay.jpg" alt="">
+                <span></span>
+                <h3>Ẩm thực ngày Tết</h3>
+                <a href="amthuc.html">Xem chi tiết</a>
+            </div>
+
+            <div class="card">
+                <img src="img/vanhoa1.jpg" alt="">
+                <span></span>
+                <h3>Văn hóa – Sinh hoạt</h3>
+                <a href="vanhoa.html">Xem chi tiết</a>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        © 2026 - Website Tết Quê Em - Nghệ An
+    </footer>
+
+    <!-- SCRIPT HOA RƠI -->
+    <script>
+    const petals = document.querySelector(".petals");
+    for (let i = 0; i < 100; i++) {
+        let flower = document.createElement("span");
+        flower.style.left = Math.random() * 100 + "%";
+        flower.style.animationDuration = (4 + Math.random() * 6) + "s";
+        flower.style.opacity = Math.random();
+        petals.appendChild(flower);
+    }
+    </script>
+</body>
+<style>
+    
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8e1;
+    }
+
+    /* menu */
+    header {
+        position:fixed;
+        top: 0px;
+        width: 100%;
+        background: #b30000;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding: 15px 40px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    nav a {
+    font-size: 20px;
+        align-items:center;
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #ffffff;
+    }
+
+    /* Banner  */
+    .banner {
+    top: 0px;
+    position: relative;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b30000;
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(179,0,0,0.4);
+    overflow: hidden;
+    }
+    
+
+    .petals span {
+        position: absolute;
+        top: -50px;
+        width: 18px;
+        height: 18px;
+        background: pink;
+        border-radius: 50%;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(500px) rotate(360deg); }
+    }
+    
+    .intro {
+    margin: 0px auto 40px;
+    width: 80%;
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+    border: 4px solid #b30000;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(179,0,0,0.4);
+    position: relative;
+    }   
+
+    /* Trang trí góc */
+    .intro::before,
+    .intro::after {
+        content: "🌸";
+        position: absolute;
+        font-size: 30px;
+        }
+
+    .intro::before {
+        top: -15px;
+        left: -15px;
+    }
+
+    .intro::after {
+        bottom: -15px;
+        right: -15px;
+    }
+    
+    /* Mục nổi bật */
+    .featured {
+    padding: 50px;
+    text-align: center;
+    font-size: 18px;
+    }
+
+    .featured h2 {
+        color: #b30000;
+        margin-bottom: 40px;
+        font-size: 38px;
+    }
+
+    .featured-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /* CARD BÁNH CHƯNG GÓI QUÀ */
+    .card {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 8px solid #1b5e20;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    /* LỚP LÁ DONG PHỦ LÊN */
+    .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            repeating-linear-gradient(
+                45deg,
+                #2e7d32,
+                #2e7d32 15px,
+                #388e3c 15px,
+                #388e3c 30px
+            );
+        z-index: 1;
+        transition: 0.3s;
+    }
+    /* ẢNH NẰM DƯỚI */
+    .card img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    
+    /* HIỆU ỨNG NỔI */
+    .card:hover {
+        transform: translateY(-12px) scale(1.05);
+    }
+
+    /* TIÊU ĐỀ */
+    .card h3 {
+        position: relative;
+        z-index: 4;
+        color: #ffffff;
+        font-size: 22px;
+        margin-top: 30%;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+    /* NÚT */
+    .card a {
+        position: relative;
+        z-index: 3;
+        color: #fffde7;
+        text-align: center;
+    }
+    .card a {
+       
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 18px;
+        background: #b30000;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .card a:hover {
+        background: #ffd700;
+        color: #b30000;
+    }
+     
+    /* HOVER → ẨN LÁ DONG */
+    .card:hover::before {
+        opacity: 0;
+    }
+
+    /* Hover nổi nhẹ */
+    .card:hover {
+        transform: scale(1.05);
+    }
+</style>
+</html>

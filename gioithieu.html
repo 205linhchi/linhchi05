@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">🌸Tết cổ truyền ở Thành Vinh🌸</div>
+        <nav>
+            <a href="index.html">Trang Chủ</a>
+            <a href="gioithieu.html">Giới Thiệu</a>
+            <a href="phongtuc.html">Phong Tục</a>
+            <a href="amthuc.html">Ẩm Thực</a>
+            <a href="vanhoa.html">Văn Hóa</a>
+         
+            <a href="lienhe.html">Liên Hệ</a>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div class="petals"></div>
+        <h1>Giới Thiệu Quê Hương</h1>
+    </section>
+
+    <section class="content">
+        <div class="dialy">
+            <div class ="text">
+            <h2>Vị trí địa lý</h2>
+                <p>Thành phố Vinh "thủ phủ" Nghệ An, là trung tâm kinh tế - văn hóa Bắc 
+            Trung Bộ, nổi bật với vị thế "Thành phố Đỏ" cách mạng (Bến Thủy, Quảng trường Hồ Chí Minh).
+            Là vùng đất "địa linh nhân kiệt", quê hương của Chủ tịch Hồ Chí Minh (làng Sen).
+            Thành phố Vinh là điểm đến lý tưởng, hội tụ đủ yếu tố: lịch sử, văn hóa, cảnh quan và 
+            ẩm thực đặc sắc, mang đậm bản sắc miền Trung.  </p>
+            </div>
+            <div class ="img">
+                <img src="img/nen.jpg">
+            
+            </div>
+        </div>
+        
+        <div class="connguoi">
+            <div class ="text">
+                <h2>Con người</h2>
+                    <p> Người dân Nghệ An - Vinh nổi tiếng với tinh thần hiếu học, kiên cường, 
+                thẳng thắn và tình nghĩa.</p>
+            </div>
+            <div class="img">
+                <img src="img/connguoi.jpg">
+            </div>
+        </div>
+    
+    </section>
+
+    <footer>
+        © 2026 - Website Tết Quê Em - Nghệ An
+    </footer>
+    <script>
+        const petals = document.querySelector(".petals");
+        for (let i = 0; i < 100; i++) {
+            let flower = document.createElement("span");
+            flower.style.left = Math.random() * 100 + "%";
+            flower.style.animationDuration = (4 + Math.random() * 6) + "s";
+            flower.style.opacity = Math.random();
+            petals.appendChild(flower);
+        }
+    </script>
+</body>
+<style>
+    .petals span {
+        position: absolute;
+        top: -50px;
+        width: 18px;
+        height: 18px;
+        background: pink;
+        border-radius: 50%;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(500px) rotate(360deg); }
+    }
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8e1;
+    padding-top: 100px; /* bằng chiều cao menu */
+    }
+    
+    .dialy{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 60px;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 6px 18px rgba(179,0,0,0.4);
+        overflow: hidden;
+    }
+    .dialy::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 25px;
+        border-radius: 25px;
+        background: url("img/phaogiay.png") repeat;
+        background-size: 250px;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+                mask-composite: exclude;
+    }
+
+    .connguoi{
+       position: relative;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 60px;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 6px 18px rgba(179,0,0,0.4);
+        overflow: hidden;
+    }
+    .connguoi::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 25px;
+        border-radius: 25px;
+        background: url("img/phaogiay.png") repeat;
+        background-size: 250px;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+                mask-composite: exclude;
+    }
+
+    .text{
+        flex:1
+        
+    }
+    .text h2 {
+        color: #b30000;
+        margin-bottom: 15px;
+    }
+
+    .img{
+        flex:1;
+    }
+    .img img{
+        width: 80%;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+    .img img:hover {
+        transform: scale(1.05);
+    }
+    /* menu */
+    header {
+        position:fixed;
+        color:#ffd700;
+        font-weight: bold; 
+        top: 0px;
+        width: 100%;
+        background: #b30000;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding: 15px 40px;
+        box-sizing: border-box;
+        z-index: 1000;
+        
+    }
+    .logo {
+        color: #ffd700;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    nav a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    }
+    nav a:hover {
+        color: #ffffff;
+    }
+
+    .page-banner {
+    margin-top: 80px;
+    margin: 0px auto 40px;
+    width: 80%;
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #b30000;
+    line-height: 1.5;
+    background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+    border: 4px solid #b30000;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(179,0,0,0.4);
+    position: relative;
+    }   
+
+    /* Trang trí góc */
+    .page-banner::before,
+    .page-banner::after {
+        content: "🌸";
+        position: absolute;
+        font-size: 30px;
+        }
+
+    .page-banner::before {
+        top: -15px;
+        left: -15px;
+    }
+
+    .page-banner::after {
+        bottom: -15px;
+        right: -15px;
+    }
+
+    .content {
+        padding: 50px 80px;
+    }
+</style>
+</html>

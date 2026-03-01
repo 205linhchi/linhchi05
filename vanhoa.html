@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn hóa</title>
+</head>
+<body>
+    <header>
+        <div class="logo">🌸Tết Thành Vinh🌸</div>
+        <nav>
+            <a href="index.html">Trang Chủ</a>
+            <a href="gioithieu.html">Giới Thiệu</a>
+            <a href="phongtuc.html">Phong Tục</a>
+            <a href="amthuc.html">Ẩm Thực</a>
+            <a href="vanhoa.html">Văn Hóa</a>
+            <a href="lienhe.html">Liên Hệ</a>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div class="petals"></div>
+        <h1>Văn hóa - Sinh hoạt</h1>
+    </section>
+
+    <section class="content">
+        <div class="culture-item">
+        <div class="culture-img">
+            <img src="img/vanhoa.jpg">
+        </div>
+        <div class="culture-text">
+            <h2>Đi chùa, đền đầu năm</h2>
+            <p>
+                Đi chùa đầu năm là nét đẹp văn hóa tâm linh lâu đời của người Việt, mang ý nghĩa cầu mong 
+                bình an, may mắn và tài lộc cho gia đình trong năm mới. Đây là dịp để hướng thiện, 
+                thanh tịnh tâm hồn, rũ bỏ muộn phiền năm cũ, đồng thời bày tỏ lòng biết ơn, 
+                tri ân Phật và tổ tiên.
+            </p>
+        </div>
+    </div>
+
+    <div class="culture-item reverse">
+        <div class="culture-img">
+            <img src="img/chotet.jpg">
+        </div>
+        <div class="culture-text">
+            <h2>Không Khí Chợ Tết</h2>
+            <p>
+                Chợ Tết rực rỡ sắc hoa, đầy ắp bánh mứt và tiếng cười.
+                Người người tấp nập mua sắm, trao nhau lời chúc năm mới,
+                tạo nên bức tranh xuân sống động và ấm áp.
+            </p>
+        </div>
+    </div>
+
+    <div class="culture-item ">
+        <div class="culture-img">
+            <img src="img/vanhoa1.jpg">
+        </div>
+        <div class="culture-text">
+            <h2>Bữa cơm gia đình ngày Tết</h2>
+            <p>
+                Mâm cơm Tết truyền thống là biểu tượng thiêng liêng 
+                của sự sum vầy, lòng hiếu thảo và cầu mong năm mới an khang, thịnh vượng.
+                Gia đình cùng quây quần thưởng thức, gắn kết tình thân. 
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        © 2026 - Website Tết Quê Em - Nghệ An
+    </footer>
+
+    <script>
+        const petals = document.querySelector(".petals");
+        for (let i = 0; i < 100; i++) {
+            let flower = document.createElement("span");
+            flower.style.left = Math.random() * 100 + "%";
+            flower.style.animationDuration = (4 + Math.random() * 6) + "s";
+            flower.style.opacity = Math.random();
+            petals.appendChild(flower);
+        }
+    </script>
+</body>
+<style>
+    .petals span {
+        position: absolute;
+        top: -50px;
+        width: 18px;
+        height: 18px;
+        background: pink;
+        border-radius: 50%;
+        animation: fall linear infinite;
+    }
+    @keyframes fall {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(500px) rotate(360deg); }
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fff8e1;
+        padding-top: 100px; /* bằng chiều cao menu */
+    }
+    /* menu */
+    header {
+        position:fixed;
+        color:#ffd700;
+        font-weight: bold; 
+        top: 0px;
+        width: 100%;
+        background: #b30000;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding: 15px 40px;
+        box-sizing: border-box;
+        z-index: 1000;
+        
+    }
+    .logo {
+        color: #ffd700;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    nav a {
+        color: #ffd700;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: #ffffff;
+    }
+
+    .page-banner {
+        margin-top: 80px;
+        margin: 0px auto 40px;
+        width: 80%;
+        padding: 40px;
+        text-align: center;
+        font-size: 18px;
+        color: #b30000;
+        line-height: 1.5;
+        background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+        border: 4px solid #b30000;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(179,0,0,0.4);
+        position: relative;
+    }   
+
+    /* Trang trí góc */
+    .page-banner::before,
+    .page-banner::after {
+        content: "🌸";
+        position: absolute;
+        font-size: 30px;
+        }
+
+    .page-banner::before {
+        top: -15px;
+        left: -15px;
+    }
+
+    .page-banner::after {
+        bottom: -15px;
+        right: -15px;
+    }
+
+    .content {
+    padding: 60px 10%;
+    background: #fff8e1;
+}
+
+.culture-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.culture-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.culture-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(174,0,0,0.2);
+}
+.culture-img img:hover {
+   filter: brightness(110%);
+    box-shadow: 0 0 25px #d32f2f;
+    transform: scale(1.05);
+}
+
+.culture-text {
+    flex: 1;
+}
+
+.culture-text h2 {
+    font-size: 28px;
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.culture-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+</style>
+</html>
